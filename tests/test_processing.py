@@ -3,7 +3,7 @@ import pytest
 from news_summarizer.entities import extract_entities
 from news_summarizer.ingestion import extract_url_text
 from news_summarizer.pipeline import analyze_text
-from news_summarizer.summarization import summarize
+from news_summarizer.summarization import extract_keywords, summarize
 from news_summarizer.text_processing import detect_language, normalize_text, split_sentences
 from news_summarizer import model_adapters, translation
 
@@ -50,6 +50,55 @@ def test_summary_respects_sentence_count():
     assert len(summarize(ENGLISH, sentence_count=2).split(". ")) <= 2
 
 
+def test_long_summary_covers_distinct_guidance_topics():
+    text = (
+        "This article explains how to evaluate statistical claims. "
+        "First, notice your feelings before accepting evidence. "
+        "Second, understand the claim and define what the numbers mean. "
+        "Check the backstory to learn where the statistic came from. "
+        "Put the number in perspective by comparing it with familiar quantities. "
+        "Beware statistical significance when a result has little practical importance. "
+        "Embrace imprecision and be curious about what is missing."
+    )
+
+    summary = summarize(text, sentence_count="Long")
+
+    assert len(summary.split()) >= 20
+    guidance_topics = ("feelings", "backstory", "perspective", "significance", "curious")
+    assert sum(topic in summary for topic in guidance_topics) >= 3
+
+
+def test_baseline_entities_prioritize_locations_and_organizations():
+    text = (
+        "Michael Pollan discussed Star Wars in New York. "
+        "The National Rifle Association and The Guardian published reports. "
+        "Researchers at Stony Brook University studied the issue."
+    )
+
+    entities = extract_entities(text)
+    by_label = {(entity.text, entity.label) for entity in entities}
+
+    assert ("Michael Pollan", "PERSON") in by_label
+    assert ("New York", "LOCATION") in by_label
+    assert ("Stony Brook", "LOCATION") in by_label
+    assert ("National Rifle Association", "ORGANIZATION") in by_label
+    assert ("The Guardian", "ORGANIZATION") in by_label
+    assert ("Star Wars", "PERSON") not in by_label
+    assert ("New York", "PERSON") not in by_label
+
+
+def test_keywords_filter_function_words_and_keep_topic_terms():
+    text = (
+        "We have more claims, but statistics require evidence. "
+        "The analysis examines bias, emotions, and perspective in public data."
+    )
+
+    keywords = {keyword.casefold() for keyword in extract_keywords(text, top_n=10)}
+
+    assert not keywords.intersection({"we", "have", "more", "but", "the", "and"})
+    assert {"claims", "statistics", "evidence", "bias"}.issubset(keywords)
+
+
 def test_entity_extraction_returns_core_categories():
     entities = extract_entities(ENGLISH)
     labels = {entity.label for entity in entities}
@@ -67,12 +116,13 @@ def test_translation_fallback_is_explicit(monkeypatch):
     monkeypatch.setattr(
         translation,
         "get_translator",
-        lambda source, target: (_ for _ in ()).throw(model_adapters.ModelUnavailableError("unavailable")),
+        lambda: (_ for _ in ()).throw(model_adapters.ModelUnavailableError("unavailable")),
     )
 
     summary, note = translation.translate_summary("A short brief.", "Hindi", "English")
     assert summary == "A short brief."
     assert "unavailable" in note
+
 
 
 @pytest.mark.parametrize("url", ["", "example.com/article", "ftp://example.com/article"])

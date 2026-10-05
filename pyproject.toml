@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "multilingual-news-summarizer"
+version = "0.1.0"
+description = "A lightweight multilingual news summarizer with entity extraction."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "streamlit>=1.38,<2",
+  "langdetect>=1.0.9,<2",
+  "trafilatura>=1.12,<2",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=8.0,<9"]
+models = [
+  "torch>=2.2,<3",
+  "transformers>=4.45,<5",
+  "sentencepiece>=0.2,<1",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.setuptools.packages.find]
+where = ["src"]

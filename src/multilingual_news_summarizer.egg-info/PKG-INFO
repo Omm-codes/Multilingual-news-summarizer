@@ -1,0 +1,63 @@
+Metadata-Version: 2.4
+Name: multilingual-news-summarizer
+Version: 0.1.0
+Summary: A lightweight multilingual news summarizer with entity extraction.
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+Requires-Dist: streamlit<2,>=1.38
+Requires-Dist: langdetect<2,>=1.0.9
+Requires-Dist: trafilatura<2,>=1.12
+Provides-Extra: test
+Requires-Dist: pytest<9,>=8.0; extra == "test"
+Provides-Extra: models
+Requires-Dist: torch<3,>=2.2; extra == "models"
+Requires-Dist: transformers<5,>=4.45; extra == "models"
+Requires-Dist: sentencepiece<1,>=0.2; extra == "models"
+
+# Sutra: Multilingual Smart News Summarizer
+
+Sutra is a Streamlit NLP project that turns English, Hindi, and Marathi news articles into concise briefs and extracts people, organizations, locations, and dates.
+
+## Features
+
+- Pasted article text or optional URL extraction
+- Language detection for English, Hindi, and Marathi
+- Lightweight extractive summarization with adjustable length
+- Heuristic entity extraction with four visible categories
+- Optional output-language control with a transparent fallback when translation is not configured
+- Responsive Streamlit dashboard with native controls, KPI metrics, and export actions
+- Input safeguards for oversized article text, downloaded content, and URLs
+
+## Setup
+
+Python 3.10 or newer is recommended.
+
+```powershell
+python -m venv .venv
+.venv\Scripts\Activate.ps1
+python -m pip install -e ".[test,models]"
+```
+
+Run the app:
+
+```powershell
+streamlit run app.py
+```
+
+Run tests:
+
+```powershell
+pytest
+```
+
+## Architecture
+
+`app.py` handles presentation. The `news_summarizer` package keeps ingestion, text processing, summarization, entity extraction, and translation separate so stronger models can be added without rewriting the UI.
+
+The default summarizer is extractive and local-friendly. Entity extraction is intentionally labeled as a lightweight demo strategy: it uses language-aware patterns and curated terms, not a fully trained multilingual NER model. For production-quality Hindi and Marathi NER, replace `entities.py` with a validated Indic or multilingual model adapter and test it against labeled examples.
+
+URL extraction requires network access and depends on publisher markup. Pasted text is the most reliable demonstration path.
+
+The current pipeline accepts articles up to 100,000 characters. The recommended transformer mode uses `csebuetnlp/mT5_multilingual_XLSum` for summarization, `l3cube-pune/indic-ner` for named-entity recognition, and `facebook/nllb-200-distilled-600M` for translation. Models are downloaded lazily from Hugging Face on first use. Use the lightweight baseline mode when model dependencies or weights are unavailable.
+
+The baseline remains available for comparison: word-frequency extractive summarization, regex entity extraction, and explicit translation fallback. Evaluation helpers in `evaluation.py` calculate ROUGE-1/2/L and exact-match NER precision, recall, and F1 for labeled experiments.

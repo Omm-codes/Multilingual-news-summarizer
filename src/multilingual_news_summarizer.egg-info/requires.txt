@@ -1,0 +1,11 @@
+streamlit<2,>=1.38
+langdetect<2,>=1.0.9
+trafilatura<2,>=1.12
+
+[models]
+torch<3,>=2.2
+transformers<5,>=4.45
+sentencepiece<1,>=0.2
+
+[test]
+pytest<9,>=8.0

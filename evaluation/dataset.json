@@ -1,0 +1,188 @@
+[
+  {
+    "id": "en_01",
+    "language": "en",
+    "text": "The Maharashtra Government opened a new irrigation center in Pune on 12 March 2026. Agriculture Minister Kavita Rao said the center will help small farms manage water during the summer.",
+    "reference_summary": "The Maharashtra Government opened an irrigation center in Pune to help small farms manage summer water use.",
+    "entities": [
+      {"text": "Maharashtra Government", "type": "ORGANIZATION"},
+      {"text": "Pune", "type": "LOCATION"},
+      {"text": "12 March 2026", "type": "DATE"},
+      {"text": "Kavita Rao", "type": "PERSON"}
+    ]
+  },
+  {
+    "id": "en_02",
+    "language": "en",
+    "text": "The National Rail Authority approved an overnight train between Delhi and Jaipur on 5 April 2026. Authority Chairperson Arjun Mehta said the service will begin with three weekly trips.",
+    "reference_summary": "The National Rail Authority approved an overnight Delhi-Jaipur train with three weekly trips starting in April.",
+    "entities": [
+      {"text": "National Rail Authority", "type": "ORGANIZATION"},
+      {"text": "Delhi", "type": "LOCATION"},
+      {"text": "Jaipur", "type": "LOCATION"},
+      {"text": "5 April 2026", "type": "DATE"},
+      {"text": "Arjun Mehta", "type": "PERSON"}
+    ]
+  },
+  {
+    "id": "en_03",
+    "language": "en",
+    "text": "GreenGrid Energy signed an agreement with the Gujarat Government to build a solar plant near Surat. Chief Executive Neha Shah said construction will start in June 2026 and create 400 local jobs.",
+    "reference_summary": "GreenGrid Energy will build a solar plant near Surat, creating 400 jobs after construction starts in June 2026.",
+    "entities": [
+      {"text": "GreenGrid Energy", "type": "ORGANIZATION"},
+      {"text": "Gujarat Government", "type": "ORGANIZATION"},
+      {"text": "Surat", "type": "LOCATION"},
+      {"text": "Neha Shah", "type": "PERSON"},
+      {"text": "June 2026", "type": "DATE"}
+    ]
+  },
+  {
+    "id": "en_04",
+    "language": "en",
+    "text": "The Mumbai University research team released a low-cost air sensor on 20 May 2026. Professor Daniel Thomas said the device can send pollution readings to public dashboards every hour.",
+    "reference_summary": "Mumbai University researchers released an affordable air sensor that reports hourly pollution readings.",
+    "entities": [
+      {"text": "Mumbai University", "type": "ORGANIZATION"},
+      {"text": "20 May 2026", "type": "DATE"},
+      {"text": "Daniel Thomas", "type": "PERSON"},
+      {"text": "Mumbai", "type": "LOCATION"}
+    ]
+  },
+  {
+    "id": "en_05",
+    "language": "en",
+    "text": "The Coastal Health Organization began a vaccination campaign in Kochi on 7 June 2026. Doctor Meera Nair said mobile clinics will visit fishing villages over the next two weeks.",
+    "reference_summary": "The Coastal Health Organization launched a Kochi vaccination campaign using mobile clinics for fishing villages.",
+    "entities": [
+      {"text": "Coastal Health Organization", "type": "ORGANIZATION"},
+      {"text": "Kochi", "type": "LOCATION"},
+      {"text": "7 June 2026", "type": "DATE"},
+      {"text": "Meera Nair", "type": "PERSON"}
+    ]
+  },
+  {
+    "id": "hi_01",
+    "language": "hi",
+    "text": "महाराष्ट्र सरकार ने नागपुर में 15 मार्च 2026 को नया कृषि प्रशिक्षण केंद्र खोला। कृषि मंत्री सीमा पाटील ने कहा कि केंद्र छोटे किसानों को आधुनिक तकनीक सिखाएगा।",
+    "reference_summary": "महाराष्ट्र सरकार ने नागपुर में छोटे किसानों के लिए कृषि प्रशिक्षण केंद्र शुरू किया।",
+    "entities": [
+      {"text": "महाराष्ट्र सरकार", "type": "ORGANIZATION"},
+      {"text": "नागपुर", "type": "LOCATION"},
+      {"text": "15 मार्च 2026", "type": "DATE"},
+      {"text": "सीमा पाटील", "type": "PERSON"}
+    ]
+  },
+  {
+    "id": "hi_02",
+    "language": "hi",
+    "text": "भारतीय रेल प्राधिकरण ने 2 अप्रैल 2026 को दिल्ली और जयपुर के बीच रात की ट्रेन को मंजूरी दी। अध्यक्ष अरुण मेहता ने बताया कि ट्रेन सप्ताह में तीन दिन चलेगी।",
+    "reference_summary": "भारतीय रेल प्राधिकरण ने दिल्ली और जयपुर के बीच सप्ताह में तीन दिन चलने वाली रात की ट्रेन मंजूर की।",
+    "entities": [
+      {"text": "भारतीय रेल प्राधिकरण", "type": "ORGANIZATION"},
+      {"text": "2 अप्रैल 2026", "type": "DATE"},
+      {"text": "दिल्ली", "type": "LOCATION"},
+      {"text": "जयपुर", "type": "LOCATION"},
+      {"text": "अरुण मेहता", "type": "PERSON"}
+    ]
+  },
+  {
+    "id": "hi_03",
+    "language": "hi",
+    "text": "सूर्य ऊर्जा कंपनी ने गुजरात सरकार के साथ समझौता किया। कंपनी सूरत के पास सौर संयंत्र बनाएगी और जून 2026 से निर्माण शुरू करेगी, ऐसा निदेशक नेहा शाह ने कहा।",
+    "reference_summary": "सूर्य ऊर्जा कंपनी गुजरात सरकार के सहयोग से सूरत के पास सौर संयंत्र बनाएगी।",
+    "entities": [
+      {"text": "सूर्य ऊर्जा कंपनी", "type": "ORGANIZATION"},
+      {"text": "गुजरात सरकार", "type": "ORGANIZATION"},
+      {"text": "सूरत", "type": "LOCATION"},
+      {"text": "जून 2026", "type": "DATE"},
+      {"text": "नेहा शाह", "type": "PERSON"}
+    ]
+  },
+  {
+    "id": "hi_04",
+    "language": "hi",
+    "text": "मुंबई विश्वविद्यालय के वैज्ञानिकों ने 20 मई 2026 को कम लागत वाला वायु सेंसर बनाया। प्रोफेसर रोहित वर्मा ने कहा कि सेंसर हर घंटे प्रदूषण की जानकारी भेजेगा।",
+    "reference_summary": "मुंबई विश्वविद्यालय के वैज्ञानिकों ने हर घंटे प्रदूषण की जानकारी देने वाला सस्ता वायु सेंसर बनाया।",
+    "entities": [
+      {"text": "मुंबई विश्वविद्यालय", "type": "ORGANIZATION"},
+      {"text": "20 मई 2026", "type": "DATE"},
+      {"text": "रोहित वर्मा", "type": "PERSON"},
+      {"text": "मुंबई", "type": "LOCATION"}
+    ]
+  },
+  {
+    "id": "hi_05",
+    "language": "hi",
+    "text": "तटीय स्वास्थ्य संगठन ने 7 जून 2026 को कोच्चि में टीकाकरण अभियान शुरू किया। डॉक्टर मीरा नायर ने कहा कि मोबाइल क्लिनिक मछुआरे गांवों में पहुंचेंगे।",
+    "reference_summary": "तटीय स्वास्थ्य संगठन ने कोच्चि के मछुआरा गांवों के लिए मोबाइल क्लिनिक वाला टीकाकरण अभियान शुरू किया।",
+    "entities": [
+      {"text": "तटीय स्वास्थ्य संगठन", "type": "ORGANIZATION"},
+      {"text": "7 जून 2026", "type": "DATE"},
+      {"text": "कोच्चि", "type": "LOCATION"},
+      {"text": "मीरा नायर", "type": "PERSON"}
+    ]
+  },
+  {
+    "id": "mr_01",
+    "language": "mr",
+    "text": "महाराष्ट्र सरकारने 18 मार्च 2026 रोजी नाशिकमध्ये नवीन सिंचन केंद्र सुरू केले. कृषिमंत्री अनिल देशमुख यांनी सांगितले की केंद्रामुळे लहान शेतकऱ्यांना पाण्याचे नियोजन करता येईल.",
+    "reference_summary": "महाराष्ट्र सरकारने नाशिकमध्ये लहान शेतकऱ्यांसाठी सिंचन केंद्र सुरू केले.",
+    "entities": [
+      {"text": "महाराष्ट्र सरकार", "type": "ORGANIZATION"},
+      {"text": "18 मार्च 2026", "type": "DATE"},
+      {"text": "नाशिक", "type": "LOCATION"},
+      {"text": "अनिल देशमुख", "type": "PERSON"}
+    ]
+  },
+  {
+    "id": "mr_02",
+    "language": "mr",
+    "text": "भारतीय रेल्वे प्राधिकरणाने 3 एप्रिल 2026 रोजी पुणे आणि औरंगाबाददरम्यान रात्रीची रेल्वे मंजूर केली. अध्यक्ष अरुण मेहता यांनी ही सेवा आठवड्यातून तीन दिवस सुरू होईल असे सांगितले.",
+    "reference_summary": "भारतीय रेल्वे प्राधिकरणाने पुणे-औरंगाबाद रात्रीची रेल्वे आठवड्यातून तीन दिवस चालवण्यास मंजुरी दिली.",
+    "entities": [
+      {"text": "भारतीय रेल्वे प्राधिकरण", "type": "ORGANIZATION"},
+      {"text": "3 एप्रिल 2026", "type": "DATE"},
+      {"text": "पुणे", "type": "LOCATION"},
+      {"text": "औरंगाबाद", "type": "LOCATION"},
+      {"text": "अरुण मेहता", "type": "PERSON"}
+    ]
+  },
+  {
+    "id": "mr_03",
+    "language": "mr",
+    "text": "सूर्य ऊर्जा कंपनीने गुजरात सरकारसोबत करार केला. कंपनी सुरतजवळ सौर प्रकल्प उभारणार असून जून 2026 मध्ये काम सुरू होईल, असे संचालक नेहा शाह यांनी सांगितले.",
+    "reference_summary": "सूर्य ऊर्जा कंपनी गुजरात सरकारच्या सहकार्याने सुरतजवळ सौर प्रकल्प उभारणार आहे.",
+    "entities": [
+      {"text": "सूर्य ऊर्जा कंपनी", "type": "ORGANIZATION"},
+      {"text": "गुजरात सरकार", "type": "ORGANIZATION"},
+      {"text": "सुरत", "type": "LOCATION"},
+      {"text": "जून 2026", "type": "DATE"},
+      {"text": "नेहा शाह", "type": "PERSON"}
+    ]
+  },
+  {
+    "id": "mr_04",
+    "language": "mr",
+    "text": "मुंबई विद्यापीठाच्या संशोधकांनी 22 मे 2026 रोजी कमी किमतीचा हवा मोजणारा सेन्सर विकसित केला. प्राध्यापक रोहित वर्मा यांनी सांगितले की सेन्सर दर तासाला प्रदूषणाची माहिती पाठवेल.",
+    "reference_summary": "मुंबई विद्यापीठाच्या संशोधकांनी दर तासाला प्रदूषणाची माहिती देणारा स्वस्त हवा सेन्सर विकसित केला.",
+    "entities": [
+      {"text": "मुंबई विद्यापीठ", "type": "ORGANIZATION"},
+      {"text": "22 मे 2026", "type": "DATE"},
+      {"text": "रोहित वर्मा", "type": "PERSON"},
+      {"text": "मुंबई", "type": "LOCATION"}
+    ]
+  },
+  {
+    "id": "mr_05",
+    "language": "mr",
+    "text": "किनारी आरोग्य संस्थेने 9 जून 2026 रोजी गोव्यात लसीकरण मोहीम सुरू केली. डॉक्टर मीरा नायर यांनी सांगितले की फिरती दवाखाने मच्छीमारांच्या गावांना भेट देतील.",
+    "reference_summary": "किनारी आरोग्य संस्थेने गोव्यात मच्छीमारांच्या गावांसाठी फिरत्या दवाखान्यांसह लसीकरण मोहीम सुरू केली.",
+    "entities": [
+      {"text": "किनारी आरोग्य संस्थेने", "type": "ORGANIZATION"},
+      {"text": "9 जून 2026", "type": "DATE"},
+      {"text": "गोव्यात", "type": "LOCATION"},
+      {"text": "मीरा नायर", "type": "PERSON"}
+    ]
+  }
+]
